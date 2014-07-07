@@ -36,3 +36,6 @@ set (EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/)
 
 # Set up required subdirectory for library
 add_subdirectory (src/lib)
+
+# Set up required subdirectory for tools
+add_subdirectory (src/tools)
