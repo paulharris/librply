@@ -17,9 +17,8 @@ Modified 2009-2011 by Lars Kiesow http://larskiesow.de lkiesow@uos.de
 
 For compilation of the library simply call
 
-    % make
-
-Furthermore you can create some example programs by calling
-
-    % make test
+    $ mkdir build
+    $ cd ./build
+    $ cmake ../
+    $ make
 
