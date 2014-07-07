@@ -11,7 +11,7 @@ This library is based on RPly 1.1.3 http://w3.impa.br/~diego/software/rply/
 
 Copyright © 2003-2011 Diego Nehab http://www.cs.princeton.edu/~diego
 
-Modified 2011-09 by Lars Kiesow http://larskiesow.de lkiesow@uos.de
+Modified 2009-2011 by Lars Kiesow http://larskiesow.de lkiesow@uos.de
 
 ## Compilation
 
