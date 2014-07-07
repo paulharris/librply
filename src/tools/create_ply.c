@@ -11,15 +11,17 @@
  **/
 
 
-#include	<stdlib.h>
-#include <stdio.h> 
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 #include "rply.h"
 
 /*******************************************************************************
  *         Name:  main
  *  Description:  
  ******************************************************************************/
-int main( int argc, char ** argv ) {
+int main( void ) {
+	int i;
 
 	/* Create new PLY file. */
 	p_ply oply = ply_create( "new.ply", PLY_ASCII, NULL, 0, NULL );
@@ -86,7 +88,6 @@ int main( int argc, char ** argv ) {
 	/* Now we generate random data to add to the file: */
 	srand ( time( NULL ) );
 
-	int i;
 	for ( i = 0; i < 99999; i++ ) {
 		ply_write( oply, (double) ( rand() % 10000 ) / 10.0 ); /* x */
 		ply_write( oply, (double) ( rand() % 10000 ) / 10.0 ); /* y */
