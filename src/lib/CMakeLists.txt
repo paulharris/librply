@@ -25,3 +25,7 @@ set_target_properties (librply_shared_lib PROPERTIES
 install (TARGETS librply_shared_lib
 	LIBRARY
 	DESTINATION lib${LIBSUFFIX})
+
+# Install rply.h file
+install (FILES "${PROJECT_SOURCE_DIR}/src/lib/rply.h"
+	DESTINATION include)
