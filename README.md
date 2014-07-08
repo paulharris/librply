@@ -1,5 +1,7 @@
 # LibRPLY
 
+[![Build Status](https://travis-ci.org/jirihnidek/librply.svg?branch=master)](https://travis-ci.org/jirihnidek/librply)
+
 ANSI C Library for PLY file format input and output.
 
 RPly is a library originally written by Diego Nehab, that lets applications
