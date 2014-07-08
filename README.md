@@ -9,9 +9,17 @@ purposes.
 
 This library is based on RPly 1.1.3 http://w3.impa.br/~diego/software/rply/
 
-Copyright © 2003-2011 Diego Nehab http://www.cs.princeton.edu/~diego
+Copyright © 2003-2013 Diego Nehab http://www.cs.princeton.edu/~diego
 
 Modified 2009-2011 by Lars Kiesow http://larskiesow.de lkiesow@uos.de
+
+Modified 2014 by Jiri Hnidek jiri.hnidek@tul.cz
+
+## Requirements
+
+* GCC or CLang
+* CMake
+* Make
 
 ## Compilation
 
@@ -21,6 +29,7 @@ For compilation of the library simply call
     $ cd ./build
     $ cmake ../
     $ make
+    $ su make install
 
 ## Usage
 
