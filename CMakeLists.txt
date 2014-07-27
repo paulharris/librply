@@ -45,5 +45,11 @@ set (EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/)
 # Set up required subdirectory for library
 add_subdirectory (src/lib)
 
-# Set up required subdirectory for tools
-add_subdirectory (src/tools)
+# Set up optional subdirectory for tools
+add_subdirectory (src/tools EXCLUDE_FROM_ALL)
+
+# Add custom target for building additional tools
+add_custom_target(tools)
+
+# Make dependencies between targets
+add_dependencies (tools convert create_ply dump sconvert)
