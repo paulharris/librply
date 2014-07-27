@@ -33,6 +33,10 @@ For compilation of the library simply call
     $ make
     $ su make install
 
+To build additional executables type following command:
+
+    $ make tools
+
 ## Usage
 
 Most users that want to read a PLY file already know which elements and
