@@ -1,5 +1,7 @@
 # RPly
 
+[![Build Status](https://travis-ci.org/nigels-com/librply.svg?branch=master)](https://travis-ci.org/nigels-com/librply)
+
 ANSI C Library for PLY file format input and output
 
 - Based on RPly 1.1.4
