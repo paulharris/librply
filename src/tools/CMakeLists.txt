@@ -1,6 +1,7 @@
 # Source codes for tools
 
 set (dump_src dump.c)
+set (dump_vertices_src dump.c)
 set (convert_src convert.c)
 set (sconvert_src sconvert.c)
 set (create_ply_src create_ply.c)
@@ -16,6 +17,11 @@ if (CMAKE_COMPILER_IS_GNUCC)
 	    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DNDEBUG -O3 -fno-strict-aliasing")
 	endif ()
 endif (CMAKE_COMPILER_IS_GNUCC)
+
+# Set up dump_vertices executables
+add_executable (dump_vertices ${dump_vertices_src})
+add_dependencies (dump_vertices librply_shared_lib)
+target_link_libraries (dump_vertices librply_shared_lib )
 
 # Set up dump executables
 add_executable (dump ${dump_src})

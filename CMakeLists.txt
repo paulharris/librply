@@ -52,4 +52,4 @@ add_subdirectory (src/tools EXCLUDE_FROM_ALL)
 add_custom_target(tools)
 
 # Make dependencies between targets
-add_dependencies (tools convert create_ply dump sconvert)
+add_dependencies (tools convert create_ply dump dump_vertices sconvert)
