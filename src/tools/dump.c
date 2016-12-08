@@ -1,4 +1,5 @@
-#include <stdio.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #include "rply.h"
 
 static int vertex_cb(p_ply_argument argument) {
@@ -27,18 +28,24 @@ static int face_cb(p_ply_argument argument) {
     return 1;
 }
 
-int main(void) {
+int main(int argc, char *argv[]) {
     long nvertices, ntriangles;
-    p_ply ply = ply_open("input.ply", NULL, 0, NULL);
-    if (!ply) return 1;
-    if (!ply_read_header(ply)) return 1;
+    p_ply ply;
+    if(argc > 1) {
+        ply = ply_open(argv[1], NULL, 0, NULL);
+    } else {
+        printf("error: missing ply file name\n");
+        return EXIT_FAILURE;
+    }
+    if (!ply) return EXIT_FAILURE;
+    if (!ply_read_header(ply)) return EXIT_FAILURE;
     nvertices = ply_set_read_cb(ply, "vertex", "x", vertex_cb, NULL, 0);
     ply_set_read_cb(ply, "vertex", "y", vertex_cb, NULL, 0);
     ply_set_read_cb(ply, "vertex", "z", vertex_cb, NULL, 1);
     ntriangles = ply_set_read_cb(ply, "face", "vertex_indices", face_cb, NULL, 0);
     printf("%ld\n%ld\n", nvertices, ntriangles);
-    if (!ply_read(ply)) return 1;
+    if (!ply_read(ply)) return EXIT_FAILURE;
     ply_close(ply);
-    return 0;
+    return EXIT_SUCCESS;
 }
 
